@@ -83,7 +83,7 @@ h2{
 }
 /*fin característica general de los h2*/
 .informacionGeneral{
-    background-color: rgb(140, 98, 141) ;
+    background-image: linear-gradient(to right, white, pink, rgb(248, 139, 248), violet) ;
     padding:1.2rem;
     justify-content: center; 
     grid-area:informacionGeneral;
@@ -96,8 +96,14 @@ h2{
 .opiniones{
     background-color: rgb(231, 166, 196);
     grid-area: opiniones;
+    transition: all 2s ease;
     padding: 1.2rem;
     margin: 1.2rem;
+    height: 700px;
+}
+.opiniones:hover{
+    height: 900px;
+    background-color: pink;
 }
 .opiniones p{
     font-family: 'Roboto Mono', monospace;
@@ -116,6 +122,12 @@ h2{
     margin: 1.2rem;
     width: 1fr; 
 }
+.reviews .img2 img{
+    transition: all 2s ease;
+}
+.reviews .img2 img:hover{
+    transform: scale(1.1, 1.1);
+}
  /*diseño footer*/
 .seccionRedes{
     background-color: navy;
@@ -128,6 +140,18 @@ h2{
 }
 .seccionRedes h3{
     text-align: left;
+}
+.seccionRedes .faceLogo{
+    transition: all 1s ease;
+}
+.seccionRedes .faceLogo:hover{
+    transform: scale(1.2, 1.2);
+}
+.seccionRedes .instaLogo{
+    transition: all 1s ease;
+}
+.seccionRedes .instaLogo:hover{
+    transform: scale(1.2, 1.2);
 }
 /*.seccionRedes p{
     font-family: 'Roboto Mono', monospace;
@@ -173,12 +197,17 @@ h3{
 .nosotrosGeneral{
     background-color: rgba(245, 245, 220, 0.397);
     grid-area:nosotrosGeneral;
+    transition: all 2s ease;
     margin: 50px;
     padding: 1.2rem;
     width: 95%;
     height: 250px;
     overflow: auto;
 }
+.nosotrosGeneral:hover{
+    height: 450px;
+}
+
 .nosotrosGeneral p{
     font-family: 'Roboto Mono', monospace;
     color: rgb(226, 248, 248);
@@ -256,12 +285,17 @@ h3{
     width: 95%;
 }
 .medioAmbiente .justiMedio{
-    background-color: rgba(46, 46, 46, 0.747); 
+    background-color: rgba(46, 46, 46, 0.747);
+    transition: all 2s ease;
     margin: 100px 100px 100px 300px;
     padding: 100px;
     width: 70%;
     height: 100px;
     overflow: auto;
+}
+.medioAmbiente .justiMedio:hover{
+    height: 600px;
+    background-color: rgba(61, 60, 60, 0.452);
 }
 .justiMedio p{
     font-family: 'Roboto Mono', monospace;
@@ -277,6 +311,12 @@ h3{
     flex-direction:row;
     width: 80%;
     justify-content: center;
+}
+.ingredientes .imagenIngredientes{
+    transition: all 2s ease;
+}
+.ingredientes .imagenIngredientes:hover{
+    transform: scale(1.2, 1.2); 
 }
 .ingredientesNaturales{
     background-color: rgba(46, 46, 46, 0.747); 
