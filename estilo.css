@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*estructura general de la página*/
+.estructura{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 2fr 2fr auto;
+    grid-template-areas: 
+     "encabezado encabezado"
+     "imagenPrincipal imagenPrincipal"
+     "informacionGeneral informacionGeneral"
+     "opiniones reviews"
+     "seccionRedes seccionRedes";
+}
+ /*diseño del cuerpo*/
+ .bodyPrincipal{
+    background-color: beige;   
+}
+/*diseño de header*/
+.encabezado{
+    top: 0px; 
+    background-color: rgb(193, 255, 148, 100);
+    padding:1.2rem;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    grid-area: encabezado;
+    width: 100%;
+}
+.encabezado .logo{
+    margin-left: 30px;
+}
+.encabezado nav ul{
+    list-style: none;
+    font-family:'Roboto Mono', monospace;
+    display: flex;
+
+
+}
+.encabezado nav ul li a{
+    display: inline;
+    width: 15%;
+    padding: 0.7rem;
+    font-size: 17px;
+}
+.encabezado nav ul li ul{
+    position: fixed;
+    display: none;
+}
+.encabezado ul li {
+    display: block;
+    width:180px;
+
+    font-size: 17px;
+}
+.encabezado ul li:hover ul {
+    display:block;
+    background-color: brown;
+}
+
+/*diseño secciones*/
+.imagenPrincipal{
+    grid-area: imagenPrincipal;
+}    
+.imagenPrincipal .img1 img{
+    grid-column: 1/2;
+    width: 100%;
+    align-content: center;
+}
+/*característica general de los h2*/
+h2{
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    color: blanchedalmond;
+}
+/*fin característica general de los h2*/
+.informacionGeneral{
+    background-color: rgb(140, 98, 141) ;
+    padding:1.2rem;
+    justify-content: center; 
+    grid-area:informacionGeneral;
+}
+.informacionGeneral p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(31, 71, 71);
+    text-align: center;
+}
+.opiniones{
+    background-color: rgb(231, 166, 196);
+    grid-area: opiniones;
+    padding: 1.2rem;
+    margin: 1.2rem;
+}
+.opiniones p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(31, 71, 71);
+}
+.reviews{
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: reviews;
+    justify-content: center;
+}
+.reviews .img2 img{
+    align-content: center;
+    margin: 1.2rem;
+    width: 1fr; 
+}
+ /*diseño footer*/
+.seccionRedes{
+    background-color: navy;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    grid-area: seccionRedes;
+    margin: 10px;
+    padding: 20px;
+}
+.seccionRedes h3{
+    text-align: left;
+}
+/*.seccionRedes p{
+    font-family: 'Roboto Mono', monospace;
+    color: aliceblue;
+}*/
+
+/*media query mobile página principal*/
+@media screen and (max-width:700px) {
+    .estructura{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas: 
+     "encabezado"
+     "imagenPrincipal"
+     "informacionGeneral"
+     "opiniones"
+     "reviews"
+     "seccionRedes";
+    }    
+}
+/*títulos para los h3*/
+h3{
+    color: beige;
+    font-family: 'IBM Plex Mono', monospace;
+}
+ /*Diseño pagina2.html*/
+.nosotros{
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7826ac0 74%);
+}
+.estructura2{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: auto 1fr 2fr auto;
+    grid-template-areas: 
+     "encabezado encabezado"
+     "nosotrosGeneral nosotrosGeneral"
+     "misionVisionValores misionVisionValores"
+     "seccionRedes seccionRedes";
+}
+.nosotrosGeneral{
+    background-color: rgba(245, 245, 220, 0.397);
+    grid-area:nosotrosGeneral;
+    margin: 50px;
+    padding: 1.2rem;
+    width: 95%;
+    height: 250px;
+    overflow: auto;
+}
+.nosotrosGeneral p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;
+}
+.misionVisionValores{
+    background-image: url(./media/fondo.jpg);
+    grid-area: misionVisionValores;
+    width: 100%;
+}
+.misionVisionValores .misionVision{
+    background-color: rgba(46, 46, 46, 0.747); 
+    margin: 100px;
+    padding: 100px;
+    width: 40%;
+    height: 250px;
+    overflow: auto;
+    display: inline-block;
+}
+.misionVisionValores .misionVision p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;
+}
+.misionVisionValores .valores{
+    background-color: rgba(46, 46, 46, 0.747); 
+    margin: 100px;
+    padding: 100px;
+    width: 40%;
+    height: 250px;
+    overflow: auto;
+    display: inline-block;
+}
+.misionVisionValores .valores p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;
+}
+/*media query mobile página2*/
+@media screen and (max-width:700px) {
+    .estructura2{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: 
+        "encabezado"
+        "nosotrosGeneral"
+        "misionVisionValores"
+        "seccionRedes";
+    }    
+}
+ /*Diseño pagina3.html*/
+ .estructura3{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr auto;
+    grid-template-areas: 
+     "encabezado encabezado"
+     "medioAmbiente medioAmbiente"
+     "ingredientes ingredientesNaturales"
+     "seccionRedes seccionRedes";
+}
+.porQueMaguey{
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7826ac0 74%);
+}
+.medioAmbiente{
+    background-image: url(./media/ecofri.jpg);
+    display: flex;
+    justify-content: center;
+    grid-area:medioAmbiente;
+    margin: 50px;
+    padding: 1.2rem;
+    width: 95%;
+}
+.medioAmbiente .justiMedio{
+    background-color: rgba(46, 46, 46, 0.747); 
+    margin: 100px 100px 100px 300px;
+    padding: 100px;
+    width: 70%;
+    height: 100px;
+    overflow: auto;
+}
+.justiMedio p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;  
+}
+
+.ingredientes{
+    grid-area: ingredientes;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction:row;
+    width: 80%;
+    justify-content: center;
+}
+.ingredientesNaturales{
+    background-color: rgba(46, 46, 46, 0.747); 
+    grid-area:ingredientesNaturales;
+    margin: 1.2rem;
+    padding: 1.2rem;
+    width: 80%;
+    height: 600px;
+    overflow: auto;
+ 
+}
+.ingredientesNaturales p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;  
+}
+/*media query mobile página3*/
+@media screen and (max-width:700px) {
+    .estructura3{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
+        grid-template-areas: 
+        "encabezado"
+        "medioAmbiente"
+        "ingredientes"
+        "ingredientesNaturales"
+        "seccionRedes";
+    }    
+}
+/*Diseño pagina4.html*/
+.estructura4{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 3fr 1fr;
+    grid-template-areas: 
+     "encabezado encabezado"
+     "producto descripcionCafe"
+     "seccionRedes seccionRedes";
+}
+.catalogo{
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7826ac0 74%);
+}
+.producto{
+    grid-area: producto;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction:row;
+    width: 90%;
+    justify-content: center;
+}
+
+.producto .shampooCafe img{
+    /*margin-left: 250px;*/
+    display: inline-block;
+    margin: 100px;
+    padding: 20px;
+}
+.descripcionCafe{
+    background-color: rgba(46, 46, 46, 0.747); 
+    grid-area:descripcionCafe;
+    margin: 1.2rem;
+    padding: 1.2rem;
+    width: 80%;
+    height: 600px;
+    overflow: auto;
+    display: inline-block;
+}
+.descripcionCafe p{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;  
+}  
+/*media query mobile página4*/
+@media screen and (max-width:700px) {
+    .estructura4{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: 
+        "encabezado"
+        "producto"
+        "descripcionCafe"
+        "seccionRedes";
+    }    
+}
+
+/*Diseño pagina5.html*/
+.preguntasFrecuentes{
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7826ac0 74%);
+}
+.preguntas{
+    background-color: rgba(46, 46, 46, 0.747); 
+    margin: 100px 100px 100px 400px;
+    padding: 100px;
+    width: 900px;
+    height: 400px;
+    overflow: auto;
+}
+.preguntas ul{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(226, 248, 248);
+    text-align: center;
+}
